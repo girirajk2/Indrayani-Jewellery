@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-temple-gold: #D4AF37;
+  --color-midnight-teal: #003333;
+  --color-silk-white: #F8F8F8;
+  
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-silk-white text-midnight-teal font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer-effect {
+  background: linear-gradient(90deg, rgba(212, 175, 55, 0) 0%, rgba(212, 175, 55, 0.2) 50%, rgba(212, 175, 55, 0) 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+.glass-morphism {
+  background: rgba(248, 248, 248, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
